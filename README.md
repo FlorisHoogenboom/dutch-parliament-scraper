@@ -6,10 +6,12 @@ Some time ago I came up with the idea to build a voting compass (i.e. an app
   tweedekamer.nl. If you are worried about any legal concerns: the Dutch
   government allow scraping of their websites!
 
+  Note: Soon this data should be availible in a readilly structured format.
+
 ## Using this notebook
 Simple open the notebook using Jupyter. To store the results you are required to
 have a Neo4J instance running somewhere. To run using Docker, simply execute
 something like
 ```
-  ddocker run --publish=7474:7474 --publish=7687:7687 --volume="$(pwd)/data:/data" --volume="$(pwd)/logs:/logs" -e NEO4J_AUTH=neo4j/{YOUR PASSWORD} neo4j:3.0
+  docker run --publish=7474:7474 --publish=7687:7687 --volume="$(pwd)/data:/data" --volume="$(pwd)/logs:/logs" -e NEO4J_AUTH=neo4j/{YOUR PASSWORD} neo4j:3.0
 ```
